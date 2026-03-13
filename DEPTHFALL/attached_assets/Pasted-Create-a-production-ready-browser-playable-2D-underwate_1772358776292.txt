@@ -1,0 +1,121 @@
+Create a production-ready browser-playable 2D underwater game called "Depthfall".
+
+Environment Requirements:
+- Must run instantly inside Replit by pressing Run.
+- Use Phaser 3 via CDN (no npm install).
+- Use plain JavaScript.
+- No build tools.
+- Everything must work immediately in browser.
+
+-----------------------------------------
+FOLDER STRUCTURE
+-----------------------------------------
+
+Create this structure:
+
+/index.html
+/game.js
+/assets/
+   player.png
+   jellyfish.png
+   seabed.jpg
+   collision.mp3
+   ambient.mp3
+
+If real assets are not available, automatically generate placeholder assets:
+
+- player.png:
+  A simple 2D side-view diver sprite (transparent PNG, 64x64).
+- jellyfish.png:
+  A glowing jellyfish sprite (transparent PNG).
+- seabed.jpg:
+  A dark ocean seabed background image.
+- collision.mp3:
+  Simple short hit sound placeholder.
+- ambient.mp3:
+  Low underwater ambient loop placeholder.
+
+IMPORTANT:
+Clearly comment in code where I can replace:
+- player.png with my own .gif character
+- jellyfish.png with my own enemy
+- seabed.jpg with my own background
+- collision.mp3 and ambient.mp3 with my own sounds
+
+-----------------------------------------
+GAME DESIGN
+-----------------------------------------
+
+Depthfall is an immersive underwater exploration game.
+
+- Large world (3000x4000).
+- No gravity.
+- Player moves freely in all directions.
+- Smooth acceleration and underwater inertia.
+- Camera smoothly follows player.
+- No forced scrolling.
+
+-----------------------------------------
+VISUAL QUALITY (PRODUCTION READY)
+-----------------------------------------
+
+- Use multiple parallax background layers.
+- Add drifting particle system ("marine snow").
+- Enable Phaser Lights system.
+- Diver flashlight emits dynamic light.
+- Jellyfish emit soft glow.
+- Fog overlay increases with depth.
+- Subtle vignette effect.
+- Smooth fade-in at start.
+- Smooth camera movement with lerp.
+
+Visuals must feel atmospheric and realistic, not arcade-style.
+
+-----------------------------------------
+AUDIO SYSTEM
+-----------------------------------------
+
+- Background ambient underwater sound loops.
+- On collision with jellyfish:
+   - Play collision.mp3
+   - Small camera shake
+- Sounds must preload properly.
+- Audio should be easy to replace later.
+
+-----------------------------------------
+ENEMY SYSTEM
+-----------------------------------------
+
+- Jellyfish float using smooth sinusoidal movement.
+- Spawn rate increases gradually over time.
+- Difficulty increases as depth increases:
+   - More jellyfish
+   - Slightly faster movement
+- No instant chaotic spawning.
+
+-----------------------------------------
+COLLISION LOGIC
+-----------------------------------------
+
+- Player has 2 health points.
+- On jellyfish collision:
+   - Play collision sound
+   - Reduce health
+   - Small red flash effect
+- Game Over screen appears when health reaches zero.
+- Include Restart button.
+
+-----------------------------------------
+TECH RULES
+-----------------------------------------
+
+- No gravity.
+- Use Arcade physics.
+- Use world bounds.
+- Use clean readable code.
+- Comment major sections clearly.
+- Must run immediately without errors.
+
+Goal:
+Create a highly polished, immersive underwater experience
+that feels like a production-ready indie game prototype.

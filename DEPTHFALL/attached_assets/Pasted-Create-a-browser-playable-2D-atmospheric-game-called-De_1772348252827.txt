@@ -1,0 +1,107 @@
+Create a browser-playable 2D atmospheric game called "Depthfall".
+
+Environment:
+- Must run inside Replit.
+- Use Phaser 3 via CDN (no build tools required).
+- Use plain JavaScript (not TypeScript).
+- Everything must run by pressing "Run".
+- No external dependencies except Phaser CDN.
+- Project should include:
+  index.html
+  game.js
+  optional assets folder structure
+
+-----------------------------------------
+GAME DESIGN
+-----------------------------------------
+
+Depthfall is NOT an arcade survival game.
+It is a slow, immersive, atmospheric underwater descent experience.
+
+-----------------------------------------
+WORLD STRUCTURE
+-----------------------------------------
+
+- Large world size (3000x4000).
+- Player starts near ocean surface (bright light rays).
+- Deeper = darker water.
+- Titanic wreck placed near bottom.
+- Camera follows player smoothly.
+- Free movement in all directions.
+- No forced vertical scrolling.
+
+Depth is calculated from player Y position.
+
+-----------------------------------------
+VISUAL ATMOSPHERE
+-----------------------------------------
+
+- Use parallax background layers.
+- Add drifting particle system (marine snow).
+- Add fog overlay that increases with depth.
+- Enable Phaser Lights system.
+- Diver flashlight should emit real dynamic light.
+- Glowing creatures emit soft colored light.
+- Add vignette effect that strengthens with depth.
+
+-----------------------------------------
+MOVEMENT PHYSICS
+-----------------------------------------
+
+- Underwater inertia.
+- Smooth acceleration.
+- Smooth deceleration.
+- Slight drift effect.
+- Camera follow with lerp.
+
+-----------------------------------------
+OXYGEN & PRESSURE
+-----------------------------------------
+
+- Oxygen slowly decreases over time.
+- Pressure increases with depth.
+- High pressure causes subtle red screen pulse.
+- Low oxygen increases breathing sound rate.
+- UI must be minimal and subtle.
+
+-----------------------------------------
+CREATURE AI
+-----------------------------------------
+
+- Jellyfish move with smooth sinusoidal floating motion.
+- Some creatures attracted to player flashlight.
+- Some flee from light.
+- Add rare "Abyssal Piranha":
+    - Spawns only deep.
+    - Slowly stalks player.
+    - Then sudden dash attack.
+    - Causes camera shake on hit.
+
+-----------------------------------------
+ENVIRONMENTAL STORYTELLING
+-----------------------------------------
+
+- Add debris objects while descending.
+- Titanic slowly fades into view through fog.
+- Final container near wreck.
+- On interaction:
+    - All particles freeze.
+    - Sound stops.
+    - Screen glitches.
+    - Fade to black.
+    - Show text:
+      "Some truths were meant to sink."
+
+-----------------------------------------
+TECH REQUIREMENTS
+-----------------------------------------
+
+- Use procedural shapes if no image assets exist.
+- No placeholders that break the game.
+- Must be playable immediately in browser.
+- Code must be clean and readable.
+- Comment major systems clearly.
+- Keep logic organized even in single game.js.
+
+The goal is to create a cinematic underwater exploration prototype,
+not a fast arcade game.
